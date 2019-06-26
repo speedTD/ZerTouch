@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/customdialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="#f000"
+                    android:text="@string/title_dialog_choiseicon"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/icon_1"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch1" />
+                        <ImageView
+                                android:id="@+id/iconcheck1"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+
+                        <ImageView
+                            android:id="@+id/icon_2"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/touch2" />
+
+                        <ImageView
+                                android:id="@+id/iconcheck2"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+
+                        <ImageView
+                            android:id="@+id/icon_3"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch3" />
+
+                        <ImageView
+                                android:id="@+id/iconcheck3"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+
+
+                        <ImageView
+                            android:id="@+id/icon_4"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch4" />
+                        <ImageView
+                                android:id="@+id/iconcheck4"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+
+                        <ImageView
+                            android:id="@+id/icon_5"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch5" />
+                        <ImageView
+                                android:id="@+id/iconcheck5"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+                        <ImageView
+                            android:id="@+id/icon_6"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch6" />
+                        <ImageView
+                                android:id="@+id/iconcheck6"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="gone" />
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+
+                        <ImageView
+                            android:id="@+id/icon_7"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch7" />
+
+                        <ImageView
+                                android:id="@+id/iconcheck7"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+
+
+                        <ImageView
+                            android:id="@+id/icon_8"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch8" />
+                        <ImageView
+                                android:id="@+id/iconcheck8"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_10sdp">
+                        <ImageView
+                            android:id="@+id/icon_9"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/customlayouttouch"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/touch9" />
+                        <ImageView
+                                android:id="@+id/iconcheck9"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+                </TableRow>
+                <Button
+                        android:textSize="@dimen/_13sdp"
+                        android:clickable="true"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="#0FA384"
+                        android:id="@+id/icon_okbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rippedialog"
+                        android:text="@string/dialog_ok" android:focusable="true"/>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

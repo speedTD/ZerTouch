@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            tools:ignore="UselessParent">
+        <android.support.v7.widget.AppCompatImageButton
+                android:clickable="true"
+                android:layout_gravity="start"
+                android:id="@+id/toolbar_back"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:src="@drawable/ic_backtoolbar"
+                android:background="@drawable/rippetoolbar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        <android.support.v7.widget.AppCompatTextView
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/_16sdp"
+                android:layout_weight="8"
+                android:id="@+id/tvTitle"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#FFFFFF"/>
+        <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <android.support.v7.widget.AppCompatImageButton
+                    android:clickable="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/toolbar_save"
+                    android:src="@drawable/ic_savetoolbar"
+                    android:background="@drawable/rippetoolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

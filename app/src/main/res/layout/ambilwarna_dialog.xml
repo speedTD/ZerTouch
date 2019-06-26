@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/customdialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ambilwarna_dialogView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="center" >
+
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/ambilwarna_viewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp" >
+
+        <com.assistive.assistivetouch.AmbilWarnaSquare
+
+            android:id="@+id/ambilwarna_viewSatBri"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_230sdp"
+            android:layerType="software" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_viewHue"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_230sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@id/ambilwarna_viewSatBri"
+            android:scaleType="fitXY"
+            android:src="@drawable/ambilwarna_hue" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_alphaCheckered"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_230sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_toRightOf="@id/ambilwarna_viewHue"
+            android:scaleType="fitXY"
+            android:src="@drawable/ambilwarna_alphacheckered_tiled" />
+
+        <View
+            android:id="@+id/ambilwarna_overlay"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_230sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_toRightOf="@id/ambilwarna_viewHue" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_cursor"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:scaleType="matrix"
+            android:src="@drawable/ambilwarna_cursor" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_alphaCursor"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:scaleType="matrix"
+            android:src="@drawable/ambilwarna_cursor" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_target"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:scaleType="matrix"
+            android:src="@drawable/ambilwarna_target" />
+
+        <LinearLayout
+
+                android:layout_centerInParent="true"
+                android:id="@+id/ambilwarna_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ambilwarna_viewSatBri"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="horizontal" tools:ignore="RtlHardcoded">
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="30dp" >
+                <View
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/ambilwarna_alphacheckered_tiled" />
+
+                <View
+                    android:id="@+id/ambilwarna_oldColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#faa" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/ambilwarna_spacer"
+                android:paddingRight="@dimen/ambilwarna_spacer"
+                android:src="@drawable/ambilwarna_arrow_right" />
+
+            <FrameLayout
+
+                android:layout_width="60dp"
+                android:layout_height="30dp" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/ambilwarna_alphacheckered_tiled" />
+
+                <View
+                    android:id="@+id/ambilwarna_newColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#aaf" />
+
+            </FrameLayout>
+
+            <Button
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:id="@+id/btn_cancel_cp"
+                    android:textColor="#00BFA5"
+                    android:text="@string/dialog_cancel"
+                    android:background="@drawable/rippetoolbar"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:textSize="@dimen/_10sdp"
+                    android:id="@+id/btn_ok_cp"
+                    android:textColor="#00BFA5"
+                    android:text="@string/dialog_ok"
+                    android:background="@drawable/rippetoolbar"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

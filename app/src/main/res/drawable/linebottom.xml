@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <!-- set the shadow color here -->
+            <stroke
+                    android:width="@dimen/_5sdp"
+                    android:color="#77469B9B" />
+
+
+
+            <corners android:radius="@dimen/_10sdp" />
+        </shape>
+    </item>
+    <!--android:top="-8dp" android:left="-8dp" android:right="-8dp"-->
+    <item >
+
+        <shape>
+            <solid android:color="#FFFFFF"/>
+            <stroke android:color="#C9FFF7" android:width="1dp"/>
+            <corners android:radius="@dimen/_10sdp" />
+        </shape>
+    </item>
+    <item android:drawable="?attr/selectableItemBackground"/>
+</layer-list>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="@dimen/_60sdp"
+                    android:layout_height="wrap_content">
+    <LinearLayout
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_65sdp">
+        <RelativeLayout
+
+                android:padding="@dimen/_3sdp"
+                android:layout_weight="7"
+                 android:gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp">
+            <ImageView
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/customitemapp"
+                    android:id="@+id/item_app_picture"
+                    android:src="@drawable/icon"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_50sdp"/>
+
+        </RelativeLayout>
+        <TextView
+                android:textSize="@dimen/_11sdp"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="center"
+                android:id="@+id/item_name_app"
+                android:textColor="#f000"
+                android:text="Máy Tính"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+    </LinearLayout>
+        <ImageView
+                android:id="@+id/iconcheck"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_check"
+                android:visibility="visible"
+                android:layout_marginEnd="7dp"/>
+    </RelativeLayout>
+</LinearLayout>
