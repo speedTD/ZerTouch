@@ -146,9 +146,6 @@
 <p style="margin-bottom: 10.0pt; line-height: normal; background: white;"><span style="font-size: 14.5pt; font-family: 'Georgia',serif; color: #383838;">We will take reasonable measures to prevent the loss, improper use of, unauthorized access to or disclosure of information. For example, some of our Services will use encryption techniques (such as SSL) to protect your personal details. However, you understand and accept that (in the Internet industry) even though we will take all possible security measures, we cannot always guarantee that your information is 100% secure. You understand and accept that the system and communication network used by you to access our Services may fail due to factors beyond our control.</span></p>
 ]]>
 </string>
-
-
-
     <string name="noti_request_permission_admin">If you activate this permission, the application will use it to
         authorize the screen lock operation, when you do not want to use it, you can come here to turn off, to remove
         the application you also need to turn it off, you have Agree to grant permission?
@@ -158,6 +155,6 @@
     <string name="title_dialog_event">Choice Action</string>
     <string name="noti_colorpickerClose">Color Picker Closed</string>
     <string name="dialog_cancel">cancel</string>
-
+    <string name="Screnshot">ScreenShot</string>
 
 </resources>

@@ -19,10 +19,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.Uri
 import android.net.wifi.WifiManager
-import android.os.Build
-import android.os.Handler
-import android.os.IBinder
-import android.os.Vibrator
+import android.os.*
 import android.provider.Settings
 import android.support.annotation.RequiresApi
 import android.support.v4.app.NotificationCompat
@@ -45,9 +42,15 @@ import com.assistive.assistivetouch.activity.PakageAppActivity
 
 import com.assistive.assistivetouch.datasave.AppPreferences
 import com.assistive.assistivetouch.datasave.Database
+import com.assistive.assistivetouch.until.SystemsUtils
+import com.assistive.assistivetouch.until.SystemsUtils.takeScreenShot
+
+import com.znitenda.lg
 
 
 import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileOutputStream
 import java.util.*
 
 class MyTouchService : Service() {
@@ -285,7 +288,6 @@ class MyTouchService : Service() {
         mviewmain?.visibility = View.GONE
         mFloatingView?.visibility = View.VISIBLE
     }
-
     var btnhome: TextView? = null
     var btnControl: TextView? = null
     var btnapp: TextView? = null
@@ -294,7 +296,6 @@ class MyTouchService : Service() {
     var btnringmode: TextView? = null
     var btnshowNotification: TextView? = null
     var btnbackpress: TextView? = null
-
     var btnhomeImg: ImageView? = null
     var btnControlImg: ImageView? = null
     var btnappImg: ImageView? = null
@@ -375,14 +376,19 @@ class MyTouchService : Service() {
                 showlayoutApp()
             }
         }
+        val timer:Timer;
         btnbackpressImg!!.setOnClickListener {
             SetupAnim(btnbackpress!!)
-            val eventmodel = db?.getbyID(2)
+           val eventmodel = db?.getbyID(2)
             if (eventmodel?.iconevent != 0) {
                 CheckEvent(eventmodel?.idevent!!)
             } else {
                 NutQuaylai()
             }
+
+
+
+
         }
         btnRescentImg!!.setOnClickListener {
             SetupAnim(btnRescent!!)
@@ -411,9 +417,11 @@ class MyTouchService : Service() {
             val eventmodel = db?.getbyID(5)
             if (eventmodel?.iconevent != 0) {
                 CheckEvent(eventmodel?.idevent!!)
+
             } else {
                 NutHienThiThongbao()
             }
+
         }
         val eventmodels = db?.getbyID(6)
         if(eventmodels?.idevent==6) {
@@ -447,6 +455,8 @@ class MyTouchService : Service() {
         }
         //event lockscreen
         btnlockImg!!.setOnClickListener {
+
+
             SetupAnim(btnlock!!)
             val eventmodel = db?.getbyID(8)
             if (eventmodel?.iconevent != 0) {
@@ -454,7 +464,6 @@ class MyTouchService : Service() {
             } else {
                 NutKhoaManHinh()
             }
-
         }
 
         val LAYOUT_FLAG: Int
@@ -488,8 +497,7 @@ class MyTouchService : Service() {
             var initTouchY: Float? = null
             var islongclick: Boolean? = null
             val timeTouchLongClick = 5000
-            var isclick = false;
-
+            var isclick = false
             override fun onTouch(v: View?, event: MotionEvent?): Boolean {
                 when (event?.action) {
                     MotionEvent.ACTION_DOWN -> {
@@ -533,6 +541,7 @@ class MyTouchService : Service() {
 
     }
 
+
     fun SetupAnim(v: TextView) {
 
         val anim = ScaleAnimation(
@@ -556,6 +565,7 @@ class MyTouchService : Service() {
 
         }
     }
+
 
     fun encodeTobase64(image: Bitmap): String {
         val baos = ByteArrayOutputStream()
@@ -826,6 +836,8 @@ class MyTouchService : Service() {
     var mCameraManager: CameraManager? = null
     var stroboFrequency = 1000L
 
+
+    @TargetApi(Build.VERSION_CODES.M)
     fun toggleFlashLight() {
 
             mCameraManager = this.getSystemService(Context.CAMERA_SERVICE) as CameraManager
@@ -1568,6 +1580,15 @@ class MyTouchService : Service() {
         }
     }
 
+    private fun NutChupManHinh() {
+        HideLayoutmain()
+        Handler().postDelayed({
+            val filename:  String  = SystemsUtils.takeScreenShot(this);
+            Log.d("PHONGDUYHAN"," đường dẫn ảnh "+filename)
+            Log.d("Mirror", SystemsUtils.isRooted().toString()+"đã root");
+        },626)
+    }
+
 
     private fun CheckEvent(idevent: Int) {
         when (idevent) {
@@ -1601,6 +1622,9 @@ class MyTouchService : Service() {
             9 -> {
                 Nutgiamam()
             }
+            11->{
+                NutChupManHinh()
+            }
         }
 
     }
@@ -1619,7 +1643,6 @@ class MyTouchService : Service() {
         when (idbutton) {
             1 -> {
                 //lấy csdl rồi set cho cái control Nút ứng dụng  cũ
-
                 val eventmodel = db?.getbyID(1)
                 if (eventmodel?.iconevent != 0) {
                     //thay icon , Thay text
@@ -1666,7 +1689,6 @@ class MyTouchService : Service() {
                     btnshowNotification?.setText(eventmodel?.textevent)
                     btnshowNotificationImg?.setImageResource(eventmodel?.iconevent!!)
                 }
-
             }
             6 -> {
                 //lấy csdl rồi set cho cái control Nút Chế độ âm  cũ
@@ -1793,4 +1815,5 @@ class MyTouchService : Service() {
             }
         }
     }
+
 }

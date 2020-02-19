@@ -73,7 +73,12 @@ class dialogpickerEventnew(context: Context,id: Int,changelayoutListener: Change
                 changelayoutListeners?.callbacks()
                 dismiss()
             }
-
+            R.id.event11_img ->{
+                database.updateEventFake(Eventmodel(11,R.drawable.ic_screenshot,context.getResources().getString(R.string.Screnshot)),idbutton!!)
+                changelayoutListeners?.callbacks()
+                dismiss()
+            }
+            
         }
     }
 
@@ -87,6 +92,7 @@ class dialogpickerEventnew(context: Context,id: Int,changelayoutListener: Change
     var event8:ImageView?=null
     var event9:ImageView?=null
     var event10:ImageView?=null
+    var event11:ImageView?=null
     var database:Database= Database(getContext())
     var idbutton:Int ?=null
     init {
@@ -110,6 +116,7 @@ class dialogpickerEventnew(context: Context,id: Int,changelayoutListener: Change
         event8=findViewById(R.id.event8_img)
         event9=findViewById(R.id.event9_img)
         event10=findViewById(R.id.event10_img)
+       event11=findViewById(R.id.event11_img)
         event1!!.setOnClickListener(this)
         event2!!.setOnClickListener(this)
         event3!!.setOnClickListener(this)
@@ -120,5 +127,6 @@ class dialogpickerEventnew(context: Context,id: Int,changelayoutListener: Change
         event8!!.setOnClickListener(this)
         event9!!.setOnClickListener(this)
         event10!!.setOnClickListener(this)
+        event11!!.setOnClickListener(this)
     }
 }
