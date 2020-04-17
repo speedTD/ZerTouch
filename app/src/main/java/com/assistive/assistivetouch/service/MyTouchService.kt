@@ -1484,7 +1484,6 @@ class MyTouchService : Service() {
             serviceIntent.setAction("com.exampke.assistivetouch.Nutdanhiem")
             startService(serviceIntent);
         }
-
     }
 
     //6
@@ -1581,12 +1580,16 @@ class MyTouchService : Service() {
     }
 
     private fun NutChupManHinh() {
-        HideLayoutmain()
-        Handler().postDelayed({
-            val filename:  String  = SystemsUtils.takeScreenShot(this);
-            Log.d("PHONGDUYHAN"," đường dẫn ảnh "+filename)
-            Log.d("Mirror", SystemsUtils.isRooted().toString()+"đã root");
-        },626)
+        if(SystemsUtils.isRooted()) {
+            HideLayoutmain()
+            Handler().postDelayed({
+                val filename: String = SystemsUtils.takeScreenShot(this);
+             //   Log.d("PHONGDUYHAN", " đường dẫn ảnh " + filename)
+            //    Log.d("Mirror", SystemsUtils.isRooted().toString() + "đã root");
+            }, 626)
+        }else{
+            Toast.makeText(this,"Thiết Bị Không Hỗ Trợ",Toast.LENGTH_LONG);
+        }
     }
 
 
